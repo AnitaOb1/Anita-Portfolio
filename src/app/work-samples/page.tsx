@@ -10,6 +10,23 @@ export const metadata: Metadata = {
     "Real content samples across feeds, carousels, graphics, video, and analytics reporting.",
 };
 
+function getYouTubeId(src: string) {
+  const match = src.match(
+    /(?:youtube\.com\/(?:shorts\/|watch\?v=|embed\/)|youtu\.be\/)([\w-]{11})/
+  );
+  return match ? match[1] : null;
+}
+
+function resolveCover(item?: { poster?: string; images: string[] }) {
+  if (!item) return undefined;
+  if (item.poster) return item.poster;
+  const first = item.images[0];
+  const ytId = getYouTubeId(first);
+  if (ytId) return `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`;
+  if (/\.(mp4|mov|webm)(\?|%|$)/i.test(first)) return undefined;
+  return first;
+}
+
 export default function WorkSamplesPage() {
   return (
     <div className="mx-auto max-w-6xl px-6 py-12 md:py-16">
@@ -29,7 +46,8 @@ export default function WorkSamplesPage() {
       <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {WORK_CATEGORIES.map((cat, i) => {
           const count = categoryItemCount(cat);
-          const cover = cat.items[0]?.images[0];
+          const firstSubItem = cat.subCategories?.find((s) => s.items.length)?.items[0];
+          const cover = resolveCover(cat.items[0] ?? firstSubItem);
           return (
             <Reveal key={cat.slug} delay={(i % 4) * 100}>
               <Link
