@@ -94,16 +94,8 @@ export default function ServicesPage() {
           <p className="mx-auto mt-3 max-w-md text-sm text-cream/70">
             Let&apos;s talk through your goals on a free 15-minute call.
           </p>
-          
+          <a
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-block rounded-full bg-rose px-7 py-3.5 text-sm font-semibold text-white transition-transform duration-250 hover:scale-[1.02]"
-          >
-            Book a Free Call
-          </a>
-        </Reveal>
-      </section>
-    </div>
-  );
-}
+            className="mt-6 inline-block rounded-full bg-rose px-7 py-3.5 text-sm font-semibold text-
