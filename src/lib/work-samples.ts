@@ -14,12 +14,6 @@ export type WorkCategory = {
 
 export const WORK_CATEGORIES: WorkCategory[] = [
   {
-    slug: "instagram-feeds",
-    name: "Instagram Feeds",
-    description: "Real feed photography and post treatments.",
-    items: [],
-  },
-  {
     slug: "carousels",
     name: "Carousels",
     description: "Multi-slide educational and storytelling carousels.",
@@ -34,6 +28,11 @@ export const WORK_CATEGORIES: WorkCategory[] = [
           "/assets/carousel/07-closing.png",
         ],
       },
+      {
+        id: "carousel-yoga-anxiety",
+        title: "Yoga & anxiety carousel",
+        images: ["/assets/carousel/yoga-anxiety-carousel-grid%20%281%29.jpg"],
+      },
     ],
   },
   {
@@ -45,6 +44,29 @@ export const WORK_CATEGORIES: WorkCategory[] = [
       { id: "graphic-2", title: "Sale graphic", images: ["/assets/graphics/graphic-2-sale.jpg"] },
       { id: "graphic-3", title: "Coffee graphic", images: ["/assets/graphics/graphic-3-coffee.jpg"] },
       { id: "graphic-4", title: "Beauty graphic", images: ["/assets/graphics/graphic-4-beauty.jpg"] },
+      { id: "graphic-5", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-07-17%20at%2020.41.09.jpeg"] },
+      { id: "graphic-6", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-08-15%20at%2007.03.03%20%282%29.jpeg"] },
+      { id: "graphic-7", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-08-15%20at%2007.03.03.jpeg"] },
+      { id: "graphic-8", title: "Promo graphic", images: ["/assets/graphics/designing%20poster.jpg"] },
+      { id: "graphic-9", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-08-15%20at%2007.03.03%20%283%29.jpeg"] },
+      { id: "graphic-10", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-07-17%20at%2020.40.56%20%281%29.jpeg"] },
+      { id: "graphic-11", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-07-17%20at%2020.40.54%20%281%29.jpeg"] },
+      { id: "graphic-12", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-07-17%20at%2020.40.56.jpeg"] },
+      { id: "graphic-13", title: "Promo graphic", images: ["/assets/graphics/Create%20Scroll%20Stopping%20visuals%20With%20Your%20Products%20_____.jpg"] },
+      { id: "graphic-14", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-07-17%20at%2020.41.07.jpeg"] },
+      { id: "graphic-15", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-07-17%20at%2020.41.10%20%281%29.jpeg"] },
+      { id: "graphic-16", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-07-17%20at%2020.40.54.jpeg"] },
+      { id: "graphic-17", title: "Promo graphic", images: ["/assets/graphics/Lemonade%20Juice.jpg"] },
+      { id: "graphic-18", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-07-17%20at%2020.41.09%20%281%29.jpeg"] },
+      { id: "graphic-19", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-07-17%20at%2020.41.08.jpeg"] },
+      { id: "graphic-20", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-07-17%20at%2020.40.55.jpeg"] },
+      { id: "graphic-21", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-07-17%20at%2020.41.14.jpeg"] },
+      { id: "graphic-22", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-07-17%20at%2020.41.06.jpeg"] },
+      { id: "graphic-23", title: "Promo graphic", images: ["/assets/graphics/WhatsApp%20Image%202026-08-15%20at%2007.03.02.jpeg"] },
+      { id: "graphic-24", title: "Promo graphic", images: ["/assets/graphics/2%20%2B%201%20on%20all%20cocktails%20%281%29.png"] },
+      { id: "graphic-25", title: "Promo graphic", images: ["/assets/graphics/2%20%2B%201%20on%20all%20cocktails.png"] },
+      { id: "graphic-26", title: "Promo graphic", images: ["/assets/graphics/Yellow%20and%20White%20Playful%20Home%20made%20Food%20Brand%20Board%20Brand%20Kit.png"] },
+      { id: "graphic-27", title: "Promo graphic", images: ["/assets/graphics/Black%20and%20Yellow%20Simple%20Chinese%20Restaurant%20flyer%20%282%29.png"] },
     ],
   },
   {
@@ -53,7 +75,15 @@ export const WORK_CATEGORIES: WorkCategory[] = [
     description: "Reels, short-form edits, and AI-assisted video content.",
     items: [],
     subCategories: [
-      { slug: "reels-short-form", name: "Reels / Short-Form Videos", items: [] },
+      {
+        slug: "reels-short-form",
+        name: "Reels / Short-Form Videos",
+        items: [
+          { id: "reel-1", title: "Reel", images: ["/assets/graphics/WhatsApp%20Video%202026-07-17%20at%2020.40.55.mp4"] },
+          { id: "reel-2", title: "Reel", images: ["/assets/graphics/WhatsApp%20Video%202026-07-17%20at%2020.40.56.mp4"] },
+          { id: "reel-3", title: "Reel", images: ["/assets/graphics/WhatsApp%20Video%202026-07-17%20at%2020.41.05.mp4"] },
+        ],
+      },
       { slug: "ai-videos", name: "AI Videos", items: [] },
     ],
   },
@@ -64,9 +94,9 @@ export const WORK_CATEGORIES: WorkCategory[] = [
     items: [],
   },
   {
-    slug: "analytics",
-    name: "Analytics",
-    description: "Performance screenshots and reporting samples.",
+    slug: "analytics-feed",
+    name: "Analytics/Feed",
+    description: "Feed content and performance screenshots.",
     items: [
       { id: "analytics-1", title: "Analytics snapshot", images: ["/assets/analytics/04af8a82febd237e4d18bb2f4d6a22db.jpg"] },
       { id: "analytics-2", title: "Analytics snapshot", images: ["/assets/analytics/0aba1bba15bcdc8669e85655d82cf8da.jpg"] },
