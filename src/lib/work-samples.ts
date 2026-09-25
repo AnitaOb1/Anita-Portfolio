@@ -2,6 +2,7 @@ export type GalleryItem = {
   id: string;
   title: string;
   images: string[]; // one image = single post, multiple = carousel/swipeable set
+  poster?: string; // optional thumbnail image for video items
 };
 
 export type WorkCategory = {
@@ -78,9 +79,9 @@ export const WORK_CATEGORIES: WorkCategory[] = [
         slug: "motion-graphics",
         name: "Motion Graphics",
         items: [
-          { id: "motion-1", title: "Motion graphic", images: ["/assets/graphics/WhatsApp%20Video%202026-07-17%20at%2020.40.55.mp4"] },
-          { id: "motion-2", title: "Motion graphic", images: ["/assets/graphics/WhatsApp%20Video%202026-07-17%20at%2020.40.56.mp4"] },
-          { id: "motion-3", title: "Motion graphic", images: ["/assets/graphics/WhatsApp%20Video%202026-07-17%20at%2020.41.05.mp4"] },
+          { id: "motion-1", title: "Motion graphic", images: ["/assets/graphics/WhatsApp%20Video%202026-07-17%20at%2020.40.55.mp4"], poster: "/assets/posters/motion-1-poster.jpg" },
+          { id: "motion-2", title: "Motion graphic", images: ["/assets/graphics/WhatsApp%20Video%202026-07-17%20at%2020.40.56.mp4"], poster: "/assets/posters/motion-2-poster.jpg" },
+          { id: "motion-3", title: "Motion graphic", images: ["/assets/graphics/WhatsApp%20Video%202026-07-17%20at%2020.41.05.mp4"], poster: "/assets/posters/motion-3-poster.jpg" },
         ],
       },
     ],
@@ -111,8 +112,8 @@ export const WORK_CATEGORIES: WorkCategory[] = [
         slug: "ai-videos",
         name: "AI Videos",
         items: [
-          { id: "ai-video-1", title: "AI video", images: ["/assets/WhatsApp%20Video%202026-07-25%20at%2014.03.23.mp4"] },
-          { id: "ai-video-2", title: "AI video", images: ["/assets/WhatsApp%20Video%202026-07-25%20at%2014.03.32.mp4"] },
+          { id: "ai-video-1", title: "AI video", images: ["/assets/WhatsApp%20Video%202026-07-25%20at%2014.03.23.mp4"], poster: "/assets/posters/ai-video-1-poster.jpg" },
+          { id: "ai-video-2", title: "AI video", images: ["/assets/WhatsApp%20Video%202026-07-25%20at%2014.03.32.mp4"], poster: "/assets/posters/ai-video-2-poster.jpg" },
         ],
       },
     ],
