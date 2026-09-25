@@ -14,6 +14,8 @@ export default function Lightbox({
   const [openItem, setOpenItem] = useState<GalleryItem | null>(null);
   const [slideIndex, setSlideIndex] = useState(0);
 
+  const isVideo = (src: string) => /\.(mp4|mov|webm)(\?|%|$)/i.test(src);
+
   useEffect(() => {
     if (!openItem) return;
     const onKey = (e: KeyboardEvent) => {
@@ -42,13 +44,23 @@ export default function Lightbox({
             }}
             className="hover-lift group relative aspect-square overflow-hidden rounded-xl border border-navy/10 bg-cream-deep text-left shadow-sm hover:shadow-lg"
           >
-            <Image
-              src={item.images[0]}
-              alt={item.title}
-              fill
-              sizes="(max-width: 640px) 45vw, 260px"
-              className="object-cover transition-transform duration-300 group-hover:scale-[1.04]"
-            />
+            {isVideo(item.images[0]) ? (
+              <video
+                src={item.images[0]}
+                muted
+                playsInline
+                preload="metadata"
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]"
+              />
+            ) : (
+              <Image
+                src={item.images[0]}
+                alt={item.title}
+                fill
+                sizes="(max-width: 640px) 45vw, 260px"
+                className="object-cover transition-transform duration-300 group-hover:scale-[1.04]"
+              />
+            )}
             {item.images.length > 1 && (
               <span className="absolute right-2 top-2 rounded-full bg-black/60 px-2 py-0.5 text-[10px] font-semibold text-white">
                 {item.images.length} slides
@@ -68,13 +80,23 @@ export default function Lightbox({
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-black">
-              <Image
-                src={openItem.images[slideIndex]}
-                alt={openItem.title}
-                fill
-                sizes="90vw"
-                className="object-contain"
-              />
+              {isVideo(openItem.images[slideIndex]) ? (
+                <video
+                  src={openItem.images[slideIndex]}
+                  controls
+                  playsInline
+                  autoPlay
+                  className="h-full w-full object-contain"
+                />
+              ) : (
+                <Image
+                  src={openItem.images[slideIndex]}
+                  alt={openItem.title}
+                  fill
+                  sizes="90vw"
+                  className="object-contain"
+                />
+              )}
             </div>
 
             {openItem.images.length > 1 && (
