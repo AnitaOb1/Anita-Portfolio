@@ -49,14 +49,12 @@ export default function Home() {
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-cream transition-transform duration-250 hover:scale-[1.02] hover:bg-navy-soft"
-                >
+                  className="inline-block rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-cream transition-transform duration-250 hover:scale-[1.02] hover:bg-navy-soft">
                   Book a Free Call
                 </a>
                 <Link
                   href="/case-studies"
-                  className="text-sm font-semibold text-navy-deep underline decoration-rose/40 underline-offset-4 transition-colors hover:text-rose"
-                >
+                  className="text-sm font-semibold text-navy-deep underline decoration-rose/40 underline-offset-4 transition-colors hover:text-rose">
                   See the work →
                 </Link>
               </div>
@@ -105,8 +103,7 @@ export default function Home() {
           <Reveal delay={300} className="mt-8">
             <Link
               href="/services"
-              className="text-sm font-semibold text-navy underline decoration-rose/40 underline-offset-4 hover:text-rose"
-            >
+              className="text-sm font-semibold text-navy underline decoration-rose/40 underline-offset-4 hover:text-rose">
               See all services →
             </Link>
           </Reveal>
@@ -142,14 +139,12 @@ export default function Home() {
             <Reveal key={cs.slug} delay={i * 100}>
               <Link
                 href={`/case-studies/${cs.slug}`}
-                className="hover-lift group block h-full overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-sm hover:shadow-xl"
-              >
+                className="hover-lift group block h-full overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-sm hover:shadow-xl">
                 <CaseStudyCover
                   slug={cs.slug}
                   accent={cs.accent}
                   category={cs.category}
-                  className="flex aspect-[4/3] flex-col justify-between p-6 text-white transition-transform duration-300 group-hover:scale-[1.02]"
-                >
+                  className="flex aspect-[4/3] flex-col justify-between p-6 text-white transition-transform duration-300 group-hover:scale-[1.02]">
                   <span className="relative w-fit rounded-full bg-white/15 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider backdrop-blur-sm">
                     Concept Project
                   </span>
@@ -174,22 +169,19 @@ export default function Home() {
         <Reveal delay={300} className="mt-10 flex flex-wrap gap-4">
           <Link
             href="/case-studies"
-            className="rounded-full border border-navy/20 px-6 py-3 text-sm font-semibold text-navy-deep transition-colors hover:border-rose hover:text-rose"
-          >
+            className="rounded-full border border-navy/20 px-6 py-3 text-sm font-semibold text-navy-deep transition-colors hover:border-rose hover:text-rose">
             See all 13 case studies
           </Link>
           <Link
             href="/work-samples"
-            className="rounded-full border border-navy/20 px-6 py-3 text-sm font-semibold text-navy-deep transition-colors hover:border-rose hover:text-rose"
-          >
+            className="rounded-full border border-navy/20 px-6 py-3 text-sm font-semibold text-navy-deep transition-colors hover:border-rose hover:text-rose">
             View work samples
           </Link>
           
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-rose px-6 py-3 text-sm font-semibold text-white transition-transform duration-250 hover:scale-[1.02]"
-          >
+            className="rounded-full bg-rose px-6 py-3 text-sm font-semibold text-white transition-transform duration-250 hover:scale-[1.02]">
             Let&apos;s talk about your brand
           </a>
         </Reveal>
