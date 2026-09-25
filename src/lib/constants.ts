@@ -20,4 +20,4 @@ export const FOOTER_LINKS = [
 ];
 
 export const SITE_NAME = "Anita Obongha";
-export const SITE_TAGLINE = "Social Media Manager for Wellness Coaches";
+export const SITE_TAGLINE = "Social Media Manager";
