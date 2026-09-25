@@ -71,7 +71,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          
+          <a
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -100,23 +100,4 @@ export default function AboutPage() {
           <p className="text-xs font-semibold uppercase tracking-wider text-rose">
             Meet me
           </p>
-          <h2 className="mt-3 font-serif text-2xl font-semibold text-navy-deep sm:text-3xl">
-            A quick video introduction
-          </h2>
-        </Reveal>
-        <Reveal delay={120} className="relative mt-6 aspect-video w-full overflow-hidden rounded-2xl bg-navy shadow-lg">
-          <video
-            src="/assets/Ai%20intro%20Video.mp4"
-            poster="/assets/posters/ai-intro-poster.jpg"
-            controls
-            playsInline
-            preload="metadata"
-            className="h-full w-full object-cover"
-          >
-            Your browser does not support the video tag.
-          </video>
-        </Reveal>
-      </section>
-    </div>
-  );
-}
+          <h2 className="mt-3 font-serif text-2xl font-semi
