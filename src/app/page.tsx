@@ -44,7 +44,7 @@ export default function Home() {
 
             <Reveal delay={450}>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                
+                <a
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -85,114 +85,4 @@ export default function Home() {
       <section className="border-y border-navy/8 bg-cream-deep/60">
         <div className="mx-auto max-w-6xl px-6 py-12">
           <Reveal>
-            <p className="text-xs font-semibold uppercase tracking-wider text-rose">
-              What I do
-            </p>
-          </Reveal>
-          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
-            {SERVICES_PREVIEW.map((s, i) => (
-              <Reveal key={s.name} delay={i * 100} className="hover-lift rounded-2xl border border-navy/10 bg-cream p-6">
-                <p className="font-serif text-xl font-semibold text-navy-deep">
-                  {s.name}
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-navy-deep/65">
-                  {s.desc}
-                </p>
-              </Reveal>
-            ))}
-          </div>
-          <Reveal delay={300} className="mt-8">
-            <Link
-              href="/services"
-              className="text-sm font-semibold text-navy underline decoration-rose/40 underline-offset-4 hover:text-rose"
-            >
-              See all services →
-            </Link>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Signature strategy journey */}
-      <section className="mx-auto max-w-4xl px-6 py-12">
-        <Reveal className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-wider text-rose">
-            My approach
-          </p>
-          <h2 className="mt-3 font-serif text-2xl font-semibold text-navy-deep sm:text-3xl">
-            From brand to growth, on purpose.
-          </h2>
-        </Reveal>
-        <SignatureJourney />
-      </section>
-
-      {/* Case studies preview */}
-      <section className="mx-auto max-w-6xl px-6 py-14">
-        <Reveal>
-          <p className="text-xs font-semibold uppercase tracking-wider text-rose">
-            Case studies
-          </p>
-          <h2 className="mt-3 font-serif text-3xl font-semibold text-navy-deep sm:text-4xl">
-            How I think through strategy
-          </h2>
-        </Reveal>
-
-        <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
-          {FEATURED_CASE_STUDIES.map((cs, i) => (
-            <Reveal key={cs.slug} delay={i * 100}>
-              <Link
-                href={`/case-studies/${cs.slug}`}
-                className="hover-lift group block h-full overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-sm hover:shadow-xl"
-              >
-                <CaseStudyCover
-                  slug={cs.slug}
-                  accent={cs.accent}
-                  category={cs.category}
-                  className="flex aspect-[4/3] flex-col justify-between p-6 text-white transition-transform duration-300 group-hover:scale-[1.02]"
-                >
-                  <span className="relative w-fit rounded-full bg-white/15 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider backdrop-blur-sm">
-                    Concept Project
-                  </span>
-                  <div className="relative">
-                    <p className="text-xs font-medium uppercase tracking-wider text-white/70">
-                      {cs.category}
-                    </p>
-                    <p className="mt-1 font-serif text-2xl font-semibold">{cs.brand}</p>
-                  </div>
-                </CaseStudyCover>
-                <div className="p-5">
-                  <p className="text-sm leading-relaxed text-navy-deep/70">{cs.tagline}</p>
-                  <span className="mt-4 inline-block text-sm font-semibold" style={{ color: cs.accent }}>
-                    Read the strategy →
-                  </span>
-                </div>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal delay={300} className="mt-10 flex flex-wrap gap-4">
-          <Link
-            href="/case-studies"
-            className="rounded-full border border-navy/20 px-6 py-3 text-sm font-semibold text-navy-deep transition-colors hover:border-rose hover:text-rose"
-          >
-            See all 13 case studies
-          </Link>
-          <Link
-            href="/work-samples"
-            className="rounded-full border border-navy/20 px-6 py-3 text-sm font-semibold text-navy-deep transition-colors hover:border-rose hover:text-rose"
-          >
-            View work samples
-          </Link>
-          
-            href={BOOKING_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-rose px-6 py-3 text-sm font-semibold text-white transition-transform duration-250 hover:scale-[1.02]"
-          >
-            Let&apos;s talk about your brand
-          </a>
-        </Reveal>
-      </section>
-    </div>
-  );
-}
+            <p className="text-xs font-semibold uppercase tracking-wider text-rose"
