@@ -92,7 +92,14 @@ export const WORK_CATEGORIES: WorkCategory[] = [
     items: [],
     subCategories: [
       { slug: "reels-short-form", name: "Reels / Short-Form Videos", items: [] },
-      { slug: "ai-videos", name: "AI Videos", items: [] },
+      {
+        slug: "ai-videos",
+        name: "AI Videos",
+        items: [
+          { id: "ai-video-1", title: "AI video", images: ["/assets/WhatsApp%20Video%202026-07-25%20at%2014.03.23.mp4"] },
+          { id: "ai-video-2", title: "AI video", images: ["/assets/WhatsApp%20Video%202026-07-25%20at%2014.03.32.mp4"] },
+        ],
+      },
     ],
   },
   {
