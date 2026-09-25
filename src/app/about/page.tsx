@@ -73,7 +73,7 @@ export default function AboutPage() {
           </div>
 
           
-            href={BOOKING_URL}
+            <a href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-10 inline-block rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-cream transition-transform duration-250 hover:scale-[1.02] hover:bg-navy-soft"
