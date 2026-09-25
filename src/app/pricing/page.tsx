@@ -123,7 +123,7 @@ export default function PricingPage() {
                 </li>
               ))}
             </ul>
-            <a
+            
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -175,7 +175,7 @@ export default function PricingPage() {
             $150
             <span className="text-base font-normal text-cream/60"> one-time</span>
           </p>
-          <a
+          
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
