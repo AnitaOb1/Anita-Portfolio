@@ -10,7 +10,7 @@ const TIERS = [
   {
     name: "Essential",
     price: "$500",
-    desc: "For coaches who need consistent, on-brand content without doing it themselves.",
+    desc: "For businesses that need consistent, on-brand content without doing it themselves.",
     features: [
       "Content strategy & monthly calendar",
       "12 feed posts / month",
@@ -22,7 +22,7 @@ const TIERS = [
   {
     name: "Signature",
     price: "$1,000",
-    desc: "Full-service management for coaches ready to grow with intention.",
+    desc: "Full-service management for businesses ready to grow with intention.",
     features: [
       "Everything in Essential",
       "20 posts + Stories / month",
@@ -35,7 +35,7 @@ const TIERS = [
   {
     name: "Prestige",
     price: "$1,500",
-    desc: "White-glove social media partnership for established coaching brands.",
+    desc: "White-glove social media partnership for established brands.",
     features: [
       "Everything in Signature",
       "30+ posts across feed, Stories & Reels",
@@ -123,7 +123,7 @@ export default function PricingPage() {
                 </li>
               ))}
             </ul>
-            <a
+            
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -163,21 +163,27 @@ export default function PricingPage() {
             One-off option
           </p>
           <p className="mt-2 font-serif text-2xl font-semibold text-cream">
-            Not ready for a monthly package?
+            Just need a consultation?
           </p>
           <p className="mt-2 max-w-md text-sm leading-relaxed text-cream/70">
             Book a one-off strategy consultation and walk away with a clear,
             written plan you can run with yourself, no retainer required.
           </p>
         </div>
-        <a
-          href={BOOKING_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="shrink-0 rounded-full bg-rose px-7 py-3.5 text-sm font-semibold text-white transition-transform duration-250 hover:scale-[1.02]"
-        >
-          Book a Consultation
-        </a>
+        <div className="flex shrink-0 flex-col items-center gap-3 sm:items-end">
+          <p className="font-serif text-3xl font-semibold text-cream">
+            $150
+            <span className="text-base font-normal text-cream/60"> one-time</span>
+          </p>
+          
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-rose px-7 py-3.5 text-sm font-semibold text-white transition-transform duration-250 hover:scale-[1.02]"
+          >
+            Book a Consultation
+          </a>
+        </div>
       </Reveal>
     </div>
   );
