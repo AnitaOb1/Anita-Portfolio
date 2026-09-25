@@ -72,7 +72,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <a
+          
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -105,20 +105,16 @@ export default function AboutPage() {
             A quick video introduction
           </h2>
         </Reveal>
-        <Reveal delay={120} className="hover-lift group relative mt-6 aspect-video w-full overflow-hidden rounded-2xl bg-navy shadow-lg">
-          <Image
-            src="/assets/photos/navy-blazer.png"
-            alt="Anita Obongha video introduction"
-            fill
-            sizes="100vw"
-            className="object-cover object-top opacity-70 transition-transform duration-500 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-navy-deep/40 text-center text-white">
-            <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-navy shadow-lg transition-transform duration-250 group-hover:scale-105">
-              ▶
-            </span>
-            <p className="text-sm font-medium">Video coming soon</p>
-          </div>
+        <Reveal delay={120} className="relative mt-6 aspect-video w-full overflow-hidden rounded-2xl bg-navy shadow-lg">
+          <video
+            src="/assets/Ai%20intro%20Video.mp4"
+            controls
+            playsInline
+            preload="metadata"
+            className="h-full w-full object-cover"
+          >
+            Your browser does not support the video tag.
+          </video>
         </Reveal>
       </section>
     </div>
