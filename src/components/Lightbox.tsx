@@ -16,6 +16,14 @@ export default function Lightbox({
 
   const isVideo = (src: string) => /\.(mp4|mov|webm)(\?|%|$)/i.test(src);
 
+  const getYouTubeId = (src: string) => {
+    const match = src.match(
+      /(?:youtube\.com\/(?:shorts\/|watch\?v=|embed\/)|youtu\.be\/)([\w-]{11})/
+    );
+    return match ? match[1] : null;
+  };
+  const isYouTube = (src: string) => !!getYouTubeId(src);
+
   useEffect(() => {
     if (!openItem) return;
     const onKey = (e: KeyboardEvent) => {
@@ -44,7 +52,22 @@ export default function Lightbox({
             }}
             className="hover-lift group relative aspect-square overflow-hidden rounded-xl border border-navy/10 bg-cream-deep text-left shadow-sm hover:shadow-lg"
           >
-            {isVideo(item.images[0]) ? (
+            {isYouTube(item.images[0]) ? (
+              <>
+                <Image
+                  src={`https://img.youtube.com/vi/${getYouTubeId(item.images[0])}/hqdefault.jpg`}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 640px) 45vw, 260px"
+                  className="object-cover transition-transform duration-300 group-hover:scale-[1.04]"
+                />
+                <span className="absolute inset-0 flex items-center justify-center">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-white">
+                    ▶
+                  </span>
+                </span>
+              </>
+            ) : isVideo(item.images[0]) ? (
               <video
                 src={item.images[0]}
                 muted
@@ -80,7 +103,15 @@ export default function Lightbox({
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-black">
-              {isVideo(openItem.images[slideIndex]) ? (
+              {isYouTube(openItem.images[slideIndex]) ? (
+                <iframe
+                  src={`https://www.youtube.com/embed/${getYouTubeId(openItem.images[slideIndex])}?autoplay=1`}
+                  title={openItem.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="h-full w-full"
+                />
+              ) : isVideo(openItem.images[slideIndex]) ? (
                 <video
                   src={openItem.images[slideIndex]}
                   controls
