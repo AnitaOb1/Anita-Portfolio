@@ -30,8 +30,7 @@ export default function ContactPage() {
           href={BOOKING_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-block rounded-full bg-navy px-8 py-4 text-sm font-semibold text-cream transition-transform duration-250 hover:scale-[1.02] hover:bg-navy-soft"
-        >
+          className="mt-8 inline-block rounded-full bg-navy px-8 py-4 text-sm font-semibold text-cream transition-transform duration-250 hover:scale-[1.02] hover:bg-navy-soft">
           Book a Free Call
         </a>
       </Reveal>
