@@ -3,6 +3,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import SignatureJourney from "@/components/SignatureJourney";
 import CaseStudyCover from "@/components/CaseStudyCover";
+import StatCounter from "@/components/StatCounter";
 import { BOOKING_URL } from "@/lib/constants";
 import { CASE_STUDIES } from "@/lib/case-studies";
 
@@ -22,7 +23,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 pb-10 pt-8 md:grid-cols-2 md:pb-14 md:pt-12">
           <div>
             <Reveal>
-              <span className="inline-flex items-center rounded-full border border-rose/30 bg-rose/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-rose">
+              <span className="shimmer-badge inline-flex items-center rounded-full border border-rose/30 bg-rose/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-rose">
                 Social Media Manager
               </span>
             </Reveal>
@@ -44,7 +45,7 @@ export default function Home() {
 
             <Reveal delay={450}>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <a
+                
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -63,7 +64,7 @@ export default function Home() {
           </div>
 
           <Reveal delay={200} className="relative mx-auto w-full max-w-md md:max-w-lg">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-navy shadow-[0_30px_60px_-15px_rgba(27,58,107,0.35)]">
+            <div className="float-photo relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-navy shadow-[0_30px_60px_-15px_rgba(27,58,107,0.35)]">
               <Image
                 src="/assets/photos/me%20ttt.jpg"
                 alt="Anita Obongha, social media manager"
@@ -74,7 +75,7 @@ export default function Home() {
               />
             </div>
             <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-cream px-5 py-4 shadow-lg sm:block">
-              <p className="font-serif text-2xl font-semibold text-navy">6+</p>
+              <StatCounter target={6} suffix="+" />
               <p className="text-xs text-navy-deep/60">happy clients</p>
             </div>
           </Reveal>
@@ -183,7 +184,7 @@ export default function Home() {
           >
             View work samples
           </Link>
-          <a
+          
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
