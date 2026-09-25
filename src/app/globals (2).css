@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand */
+  --color-navy: #1B3A6B;
+  --color-navy-deep: #12274a;
+  --color-navy-soft: #2c4d84;
+  --color-rose: #C0507A;
+  --color-rose-soft: #e3a9bf;
+  --color-cream: #FBF7F1;
+  --color-cream-deep: #F3ECE1;
+  --color-ink: #171717;
+
+  --background: var(--color-cream);
+  --foreground: var(--color-navy-deep);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: var(--color-navy);
+  --color-navy-deep: var(--color-navy-deep);
+  --color-navy-soft: var(--color-navy-soft);
+  --color-rose: var(--color-rose);
+  --color-rose-soft: var(--color-rose-soft);
+  --color-cream: var(--color-cream);
+  --color-cream-deep: var(--color-cream-deep);
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ---------- Progressive-enhancement scroll reveal ---------- */
+/* Visible by default. Only animated once html.js is set AND JS confirms
+   IntersectionObserver support, so nothing is ever invisible if scripts
+   are blocked. */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+html.js .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+html.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Subtle hover lift utility */
+.hover-lift {
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Gentle floating motion for the hero photo */
+@keyframes float-y {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-14px); }
+}
+.float-photo {
+  animation: float-y 6s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .float-photo { animation: none; }
+}
+
+/* Shimmer sweep for the hero eyebrow badge */
+@keyframes shimmer-sweep {
+  0% { background-position: -150% 0; }
+  100% { background-position: 250% 0; }
+}
+.shimmer-badge {
+  background-image: linear-gradient(
+    100deg,
+    transparent 30%,
+    rgba(192, 80, 122, 0.35) 50%,
+    transparent 70%
+  );
+  background-size: 250% 100%;
+  animation: shimmer-sweep 3.2s ease-in-out infinite;
+}
+
+::selection {
+  background: var(--color-rose);
+  color: white;
+}
