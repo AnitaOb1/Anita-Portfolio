@@ -65,7 +65,7 @@ export default function Home() {
           <Reveal delay={200} className="relative mx-auto w-full max-w-md md:max-w-lg">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-navy shadow-[0_30px_60px_-15px_rgba(27,58,107,0.35)]">
               <Image
-                src="/assets/photos/navy-blazer.jpg"
+                src="/assets/photos/me%20ttt.jpg"
                 alt="Anita Obongha, social media manager"
                 fill
                 priority
