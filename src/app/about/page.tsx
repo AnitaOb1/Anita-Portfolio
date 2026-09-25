@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import { BOOKING_URL } from "@/lib/constants";
 
@@ -22,7 +23,7 @@ const SKILLS = [
 export default function AboutPage() {
   return (
     <div>
-      <section className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-6 py-12 md:grid-cols-2 md:py-16">
+      <section className="mx-auto grid max-w-6xl grid-cols-1 items-stretch gap-10 px-6 py-12 md:grid-cols-2 md:py-16">
         <Reveal className="order-2 md:order-1">
           <p className="text-xs font-semibold uppercase tracking-wider text-rose">
             About me
@@ -71,7 +72,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <a
+          
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
@@ -79,44 +80,3 @@ export default function AboutPage() {
           >
             Book a Free Call
           </a>
-        </Reveal>
-
-        <Reveal delay={150} className="order-1 mx-auto w-full max-w-lg md:order-2">
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-rose-soft/30 shadow-[0_30px_60px_-15px_rgba(192,80,122,0.3)]">
-            <Image
-              src="/assets/photos/pink-dress-darkbg.jpg"
-              alt="Anita Obongha, freelance social media manager"
-              fill
-              sizes="(max-width: 768px) 90vw, 520px"
-              className="object-cover object-top"
-            />
-          </div>
-        </Reveal>
-      </section>
-
-      {/* Meet Anita, intro video */}
-      <section className="mx-auto max-w-4xl px-6 pb-12 md:pb-16">
-        <Reveal>
-          <p className="text-xs font-semibold uppercase tracking-wider text-rose">
-            Meet me
-          </p>
-          <h2 className="mt-3 font-serif text-2xl font-semibold text-navy-deep sm:text-3xl">
-            A quick video introduction
-          </h2>
-        </Reveal>
-        <Reveal delay={120} className="relative mt-6 aspect-video w-full overflow-hidden rounded-2xl bg-navy shadow-lg">
-          <video
-            src="/assets/Ai%20intro%20Video.mp4"
-            poster="/assets/posters/ai-intro-poster.jpg"
-            controls
-            playsInline
-            preload="metadata"
-            className="h-full w-full object-cover"
-          >
-            Your browser does not support the video tag.
-          </video>
-        </Reveal>
-      </section>
-    </div>
-  );
-}
