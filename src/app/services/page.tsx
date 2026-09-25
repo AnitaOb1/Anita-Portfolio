@@ -98,4 +98,12 @@ export default function ServicesPage() {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-block rounded-full bg-rose px-7 py-3.5 text-sm font-semibold text-
+            className="mt-6 inline-block rounded-full bg-rose px-7 py-3.5 text-sm font-semibold text-white transition-transform duration-250 hover:scale-[1.02]"
+          >
+            Book a Free Call
+          </a>
+        </Reveal>
+      </section>
+    </div>
+  );
+}
