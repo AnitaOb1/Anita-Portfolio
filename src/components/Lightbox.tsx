@@ -70,6 +70,7 @@ export default function Lightbox({
             ) : isVideo(item.images[0]) ? (
               <video
                 src={item.images[0]}
+                poster={item.poster}
                 muted
                 playsInline
                 preload="metadata"
@@ -114,9 +115,10 @@ export default function Lightbox({
               ) : isVideo(openItem.images[slideIndex]) ? (
                 <video
                   src={openItem.images[slideIndex]}
+                  poster={openItem.poster}
                   controls
                   playsInline
-                  autoPlay
+                  preload="metadata"
                   className="h-full w-full object-contain"
                 />
               ) : (
