@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import LeadMagnetForm from "@/components/LeadMagnetForm";
+import ContactForm from "@/components/ContactForm";
 import { BOOKING_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export default function ContactPage() {
       </Reveal>
 
       <Reveal delay={150}>
-        <a
+        
           href={BOOKING_URL}
           target="_blank"
           rel="noopener noreferrer"
@@ -35,7 +36,17 @@ export default function ContactPage() {
         </a>
       </Reveal>
 
-      <Reveal delay={250} className="mx-auto mt-20 max-w-md rounded-3xl border border-rose/20 bg-rose/5 px-8 py-10">
+      <Reveal delay={200} className="mx-auto mt-16 max-w-lg rounded-3xl border border-navy/10 bg-white px-8 py-10 text-center shadow-sm">
+        <p className="font-serif text-xl font-semibold text-navy-deep">
+          Prefer to send a message instead?
+        </p>
+        <p className="mt-2 text-sm leading-relaxed text-navy-deep/65">
+          Fill this in and it will open in your email app, ready to send.
+        </p>
+        <ContactForm />
+      </Reveal>
+
+      <Reveal delay={250} className="mx-auto mt-16 max-w-md rounded-3xl border border-rose/20 bg-rose/5 px-8 py-10">
         <p className="font-serif text-xl font-semibold text-navy-deep">
           Not ready to book yet?
         </p>
