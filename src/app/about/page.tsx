@@ -6,7 +6,7 @@ import { BOOKING_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About | Anita Obongha",
   description:
-    "Meet Anita Obongha, a freelance social media manager who helps wellness coaches build a content strategy that actually converts.",
+    "Meet Anita Obongha, a freelance social media manager who helps businesses and brands build a content strategy that actually converts.",
 };
 
 const SKILLS = [
@@ -28,24 +28,23 @@ export default function AboutPage() {
             About me
           </p>
           <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-navy-deep sm:text-5xl">
-            I help wellness coaches sound like themselves online,
-            strategically.
+            I help brands sound like themselves online, strategically.
           </h1>
 
           <div className="mt-6 space-y-4 text-navy-deep/75 leading-relaxed">
             <p>
-              I&apos;m Anita, a freelance social media manager who works
-              exclusively with wellness coaches, nutritionists, yoga
-              teachers, life coaches, and holistic health practitioners who
-              know their craft but don&apos;t have hours to spare on content.
+              I&apos;m Anita, a freelance social media manager who works with
+              business owners and brands across industries who know their
+              craft but don&apos;t have hours to spare on content.
             </p>
             <p>
               My job is to take social media off your plate entirely:
               strategy, content, scheduling, community, and the reporting
-              that actually tells you what&apos;s working. I help coaches who
-              are posting inconsistently, feel invisible online, or are tired
-              of guessing what to say, and turn that into a calm,
-              intentional presence that brings the right clients to them.
+              that actually tells you what&apos;s working. I help business
+              owners who are posting inconsistently, feel invisible online,
+              or are tired of guessing what to say, and turn that into a
+              calm, intentional presence that brings the right customers to
+              them.
             </p>
             <p>
               My approach starts with strategy, not content, understanding
@@ -73,7 +72,7 @@ export default function AboutPage() {
           </div>
 
           
-            <a href={BOOKING_URL}
+            href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-10 inline-block rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-cream transition-transform duration-250 hover:scale-[1.02] hover:bg-navy-soft"
@@ -82,13 +81,13 @@ export default function AboutPage() {
           </a>
         </Reveal>
 
-        <Reveal delay={150} className="order-1 mx-auto w-full max-w-md md:order-2">
+        <Reveal delay={150} className="order-1 mx-auto w-full max-w-lg md:order-2">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-rose-soft/30 shadow-[0_30px_60px_-15px_rgba(192,80,122,0.3)]">
             <Image
-              src="/assets/photos/pink-dress-white-bg.png"
+              src="/assets/photos/pink-dress-darkbg.jpg"
               alt="Anita Obongha, freelance social media manager"
               fill
-              sizes="(max-width: 768px) 90vw, 420px"
+              sizes="(max-width: 768px) 90vw, 520px"
               className="object-cover object-top"
             />
           </div>
@@ -108,6 +107,7 @@ export default function AboutPage() {
         <Reveal delay={120} className="relative mt-6 aspect-video w-full overflow-hidden rounded-2xl bg-navy shadow-lg">
           <video
             src="/assets/Ai%20intro%20Video.mp4"
+            poster="/assets/posters/ai-intro-poster.jpg"
             controls
             playsInline
             preload="metadata"
