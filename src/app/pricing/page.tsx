@@ -72,8 +72,7 @@ export default function PricingPage() {
               tier.featured
                 ? "border-rose bg-navy text-cream shadow-xl"
                 : "border-navy/10 bg-white"
-            }`}
-          >
+            }`}>
             {tier.featured && (
               <span className="absolute -top-3 left-8 rounded-full bg-rose px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
                 Most popular
@@ -82,21 +81,18 @@ export default function PricingPage() {
             <p
               className={`font-serif text-xl font-semibold ${
                 tier.featured ? "text-cream" : "text-navy-deep"
-              }`}
-            >
+              }`}>
               {tier.name}
             </p>
             <p
               className={`mt-2 font-serif text-4xl font-semibold ${
                 tier.featured ? "text-cream" : "text-navy-deep"
-              }`}
-            >
+              }`}>
               {tier.price}
               <span
                 className={`text-base font-normal ${
                   tier.featured ? "text-cream/60" : "text-navy-deep/50"
-                }`}
-              >
+                }`}>
                 {" "}
                 /mo
               </span>
@@ -104,8 +100,7 @@ export default function PricingPage() {
             <p
               className={`mt-3 text-sm leading-relaxed ${
                 tier.featured ? "text-cream/70" : "text-navy-deep/60"
-              }`}
-            >
+              }`}>
               {tier.desc}
             </p>
             <ul className="mt-6 flex-1 space-y-3">
@@ -114,8 +109,7 @@ export default function PricingPage() {
                   key={f}
                   className={`flex gap-2 text-sm ${
                     tier.featured ? "text-cream/85" : "text-navy-deep/75"
-                  }`}
-                >
+                  }`}>
                   <span className={tier.featured ? "text-rose-soft" : "text-rose"}>
                     ✓
                   </span>
@@ -131,8 +125,7 @@ export default function PricingPage() {
                 tier.featured
                   ? "bg-rose text-white"
                   : "bg-navy text-cream hover:bg-navy-soft"
-              }`}
-            >
+              }`}>
               Get Started
             </a>
           </Reveal>
@@ -179,8 +172,7 @@ export default function PricingPage() {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-rose px-7 py-3.5 text-sm font-semibold text-white transition-transform duration-250 hover:scale-[1.02]"
-          >
+            className="rounded-full bg-rose px-7 py-3.5 text-sm font-semibold text-white transition-transform duration-250 hover:scale-[1.02]">
             Book a Consultation
           </a>
         </div>
