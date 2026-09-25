@@ -91,7 +91,22 @@ export const WORK_CATEGORIES: WorkCategory[] = [
     description: "Reels, short-form edits, and AI-assisted video content.",
     items: [],
     subCategories: [
-      { slug: "reels-short-form", name: "Reels / Short-Form Videos", items: [] },
+      {
+        slug: "reels-short-form",
+        name: "Reels / Short-Form Videos",
+        items: [
+          { id: "reel-1", title: "Reel", images: ["https://youtube.com/shorts/GcPPj7OcYJQ"] },
+          { id: "reel-2", title: "Reel", images: ["https://youtube.com/shorts/mSkxpDhc1Uc"] },
+          { id: "reel-3", title: "Reel", images: ["https://youtube.com/shorts/ma5k6cPkf38"] },
+          { id: "reel-4", title: "Reel", images: ["https://youtube.com/shorts/l5spAtDTTSs"] },
+          { id: "reel-5", title: "Reel", images: ["https://youtube.com/shorts/zKa_edmwOtg"] },
+          { id: "reel-6", title: "Reel", images: ["https://youtube.com/shorts/Aj6m0Et5j8k"] },
+          { id: "reel-7", title: "Reel", images: ["https://youtube.com/shorts/OhUsZDXEWtc"] },
+          { id: "reel-8", title: "Reel", images: ["https://youtube.com/shorts/p0B7xoOAaf0"] },
+          { id: "reel-9", title: "Reel", images: ["https://youtube.com/shorts/sorQhJSZDVI"] },
+          { id: "reel-10", title: "Reel", images: ["https://youtube.com/shorts/wpJBL0J08nY"] },
+        ],
+      },
       {
         slug: "ai-videos",
         name: "AI Videos",
