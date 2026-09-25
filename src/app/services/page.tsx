@@ -5,13 +5,13 @@ import { BOOKING_URL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Services | Anita Obongha",
   description:
-    "Full-service social media management for wellness coaches, strategy, content creation, planning, copywriting, design, video, community, and reporting.",
+    "Full-service social media management for businesses and brands, strategy, content creation, planning, copywriting, design, video, community, and reporting.",
 };
 
 const SERVICES = [
   {
     name: "Social Media Strategy",
-    desc: "A clear content and growth plan built around your audience, your offer, and how wellness clients actually decide to book.",
+    desc: "A clear content and growth plan built around your audience, your offer, and how your customers actually decide to buy.",
   },
   {
     name: "Social Media Management",
@@ -59,11 +59,11 @@ export default function ServicesPage() {
             <span className="bg-rose/10 px-1.5 text-rose">
               Full-service social media management
             </span>{" "}
-            for wellness coaches.
+            for your business.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-navy-deep/70">
             From strategy to the last comment reply, everything your social
-            media needs, so you can stay focused on the people you coach.
+            media needs, so you can stay focused on running your business.
           </p>
         </Reveal>
 
@@ -94,7 +94,7 @@ export default function ServicesPage() {
           <p className="mx-auto mt-3 max-w-md text-sm text-cream/70">
             Let&apos;s talk through your goals on a free 15-minute call.
           </p>
-          <a
+          
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
