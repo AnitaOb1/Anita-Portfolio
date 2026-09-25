@@ -7,7 +7,7 @@ import { BOOKING_URL } from "@/lib/constants";
 import { CASE_STUDIES } from "@/lib/case-studies";
 
 const SERVICES_PREVIEW = [
-  { name: "Strategy", desc: "A content roadmap built around how coaches actually get clients." },
+  { name: "Strategy", desc: "A content roadmap built around how your business actually gets clients." },
   { name: "Content Creation", desc: "Feeds, carousels, reels and graphics that sound like you." },
   { name: "Management & Reporting", desc: "Scheduling, community, and monthly numbers that make sense." },
 ];
@@ -23,29 +23,28 @@ export default function Home() {
           <div>
             <Reveal>
               <span className="inline-flex items-center rounded-full border border-rose/30 bg-rose/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-rose">
-                Social Media Manager for Wellness Coaches
+                Social Media Manager
               </span>
             </Reveal>
 
             <Reveal delay={150}>
               <h1 className="mt-6 font-serif text-4xl font-semibold leading-[1.08] tracking-tight text-navy-deep sm:text-5xl lg:text-6xl">
-                Strategic social media,{" "}
-                <span className="italic text-rose">done for you</span>, so
-                coaches can focus on coaching.
+                Social media, <span className="italic text-rose">handled</span>,
+                so you can focus on running your business.
               </h1>
             </Reveal>
 
             <Reveal delay={300}>
               <p className="mt-6 max-w-lg text-lg leading-relaxed text-navy-deep/70">
                 I&apos;m Anita, a freelance social media manager who helps
-                wellness coaches turn scattered posting into a strategy that
-                actually brings clients through the door.
+                business owners and brands turn scattered posting into a
+                strategy that actually brings customers through the door.
               </p>
             </Reveal>
 
             <Reveal delay={450}>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <a
+                
                   href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -66,8 +65,8 @@ export default function Home() {
           <Reveal delay={200} className="relative mx-auto w-full max-w-md md:max-w-lg">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] bg-navy shadow-[0_30px_60px_-15px_rgba(27,58,107,0.35)]">
               <Image
-                src="/assets/photos/navy-blazer.png"
-                alt="Anita Obongha, social media manager for wellness coaches"
+                src="/assets/photos/navy-blazer.jpg"
+                alt="Anita Obongha, social media manager"
                 fill
                 priority
                 sizes="(max-width: 768px) 90vw, 560px"
@@ -76,7 +75,7 @@ export default function Home() {
             </div>
             <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-cream px-5 py-4 shadow-lg sm:block">
               <p className="font-serif text-2xl font-semibold text-navy">6+</p>
-              <p className="text-xs text-navy-deep/60">happy wellness clients</p>
+              <p className="text-xs text-navy-deep/60">happy clients</p>
             </div>
           </Reveal>
         </div>
@@ -184,7 +183,7 @@ export default function Home() {
           >
             View work samples
           </Link>
-          <a
+          
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
